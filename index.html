@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cube Madness</title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                font-family: 'Righteous', cursive;
+            }
+            canvas {width: 100%; height: 100%}
+            .loading-1 {
+                border-radius: 10px;
+            }
+            #napis{
+                padding: 20px;
+                box-shadow: black 0px 0px 5px 5px;
+                background-color: rgba(0,0,0,0.5);
+                left: 20px;
+                top: 20px;
+                position: absolute;
+                color: white;
+                font-size: 20px;
+            }
+            #menu{
+                width: 600px;
+                height: 400px;
+                float: left;
+                padding: 20px;
+                box-shadow: black 0px 0px 5px 5px;
+                background-color: rgba(11,11,11,0.8);
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                color: white;
+                font-size: 20px;
+                text-align: center;
+            }
+            #naslov{
+                font-size: 60px;
+            }
+            #score,#bestScore{
+                font-weight: bold;
+            }
+            #start{
+                margin: 5px;
+                width: 200px;
+                height: 50px;
+                outline: none;
+                border: 0px;
+                background-color: white;
+                border-radius: 5px;
+                font-family: 'Righteous', cursive;
+                font-size: 20px;
+            }
+            #start:hover{
+               box-shadow: white 0px 0px 5px 0px; 
+            }
+            #loading{
+                width: 600px;
+                height: 400px;
+                float: left;
+                padding: 20px;
+                padding-top:100px;
+                box-shadow: black 0px 0px 5px 5px;
+                background-color: rgba(11,11,11,0.8);
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                position: absolute;
+                color: white;
+                font-size: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body onload="start()">
+        <div id="napis">
+            Level: <span id="level">1</span><br>
+            Score: <span id="score">0</span><br>
+            Best score: <span id="bscore">0</span><br>
+            FPS: <span id="fps">0</span>
+        </div>
+        <div id="loading" style="display:block;">
+            Loading... <br />
+            <img src='img/loadingBar.gif' class='loading-1' width='250px' height='25px'/>
+        </div>
+        <div id="menu" style="display:none;">
+            <span id="naslov">Cube Madness</span><br><br>
+            Instruction:<br>
+            <hr>
+            - For move use keyboard arrows.<br>
+            <br><br><br><br>
+            Good luck :D <br><button id="start" onclick="hide_menu();"> START </button> <br>
+        </div>
+        <script src="three.js"></script>
+        <script src="cookie.js"></script>
+        <script src="game.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    </body>
+</html>
